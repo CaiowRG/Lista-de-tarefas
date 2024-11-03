@@ -7,7 +7,7 @@ function TodoList() {
     const [lista, setLista] = useState([]);
     const [novoItem, setNovoItem] = useState("");
 
-    function adicionaItem(form){
+    function adicionarItem(form){
         form.preventDefault();
         if(!novoItem){
             return;
@@ -23,11 +23,11 @@ function TodoList() {
             <h1>Lista de Tarefas</h1>
             <form onSubmit={adicionarItem}>
                 <input 
-                id="input-entrada"
-                type="text"
-                value={novoItem}
-                onChange={(e)=>{setNovoItem(e.target.value)}}
-                placeholder="Adicionde uma tarefa"
+                    id="input-entrada"
+                    type="text"
+                    value={novoItem}
+                    onChange={(e)=>{setNovoItem(e.target.value)}}
+                    placeholder="Adicionde uma tarefa"
                 />
                 <button type="submit"></button>
             </form>
